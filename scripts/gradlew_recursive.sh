@@ -26,9 +26,9 @@
 
 set -xe
 
-# Crawl all gradlew files which indicate an Android project
-# You may edit this if your repo has a different project structure
-for GRADLEW in `find . -name "gradlew"` ; do
+# 查找所有的gradlew文件，这些文件表明是一个Android项目
+# 如果你的仓库有不同的项目结构，可以编辑此处
+for GRADLEW in $(find . -name "gradlew"); do
     SAMPLE=$(dirname "${GRADLEW}")
-    bash "$GRADLEW" -p "$SAMPLE" --stacktrace $@
+    bash "$GRADLEW" -p "$SAMPLE" --stacktrace "$@"
 done

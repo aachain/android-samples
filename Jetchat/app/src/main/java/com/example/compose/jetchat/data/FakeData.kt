@@ -1,17 +1,15 @@
 /*
- * Copyright 2020 The Android Open Source Project
+ * 版权所有 2020 Android 开源项目
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
+ * 根据 Apache 许可证 2.0 版（以下简称“许可证”）授权；
+ * 除非遵循许可证，否则您不能使用此文件。
+ * 您可以在以下网址获取许可证副本：
  *
  *     https://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ * 除非适用法律要求或书面同意，否则根据许可证分发的软件
+ * 是按“原样”分发的，没有任何明示或暗示的担保或条件。
+ * 请参阅许可证以了解管理权限和限制的特定语言。
  */
 
 package com.example.compose.jetchat.data
@@ -28,76 +26,73 @@ import com.example.compose.jetchat.profile.ProfileScreenState
 
 private val initialMessages = listOf(
     Message(
-        "me",
-        "Check it out!",
-        "8:07 PM"
+        "我",
+        "看看这个！",
+        "晚上8:07"
     ),
     Message(
-        "me",
-        "Thank you!$EMOJI_PINK_HEART",
-        "8:06 PM",
+        "我",
+        "谢谢你！$EMOJI_PINK_HEART",
+        "晚上8:06",
         R.drawable.sticker
     ),
     Message(
-        "Taylor Brooks",
-        "You can use all the same stuff",
-        "8:05 PM"
+        "泰勒·布鲁克斯",
+        "您可以使用所有相同的东西",
+        "晚上8:05"
     ),
     Message(
-        "Taylor Brooks",
-        "@aliconors Take a look at the `Flow.collectAsStateWithLifecycle()` APIs",
-        "8:05 PM"
+        "泰勒·布鲁克斯",
+        "@aliconors 看一下 `Flow.collectAsStateWithLifecycle()` API",
+        "晚上8:05"
     ),
     Message(
-        "John Glenn",
-        "Compose newbie as well $EMOJI_FLAMINGO, have you looked at the JetNews sample? " +
-            "Most blog posts end up out of date pretty fast but this sample is always up to " +
-            "date and deals with async data loading (it's faked but the same idea " +
-            "applies) $EMOJI_POINTS https://goo.gle/jetnews",
-        "8:04 PM"
+        "约翰·格伦",
+        "也是 Compose 新手 $EMOJI_FLAMINGO，你看过 JetNews 示例吗？" +
+            "大多数博客文章很快就会过时，但这个示例始终保持最新，并处理异步数据加载（虽然它是假的，但相同的想法适用） $EMOJI_POINTS https://goo.gle/jetnews",
+        "晚上8:04"
     ),
     Message(
-        "me",
-        "Compose newbie: I’ve scourged the internet for tutorials about async data " +
-            "loading but haven’t found any good ones $EMOJI_MELTING $EMOJI_CLOUDS. " +
-            "What’s the recommended way to load async data and emit composable widgets?",
-        "8:03 PM"
+        "我",
+        "Compose 新手：我在网上搜寻有关异步数据加载的教程，但没有找到任何好的教程 $EMOJI_MELTING $EMOJI_CLOUDS。" +
+            "加载异步数据并发出可组合小部件的推荐方式是什么？",
+        "晚上8:03"
     )
 )
 
 val exampleUiState = ConversationUiState(
     initialMessages = initialMessages,
-    channelName = "#composers",
+    channelName = "#作家",
     channelMembers = 42
 )
 
 /**
- * Example colleague profile
+ * 示例同事档案
  */
 val colleagueProfile = ProfileScreenState(
     userId = "12345",
     photo = R.drawable.someone_else,
-    name = "Taylor Brooks",
-    status = "Away",
+    name = "泰勒·布鲁克斯",
+    status = "离开",
     displayName = "taylor",
-    position = "Senior Android Dev at Openlane",
+    position = "Openlane 的高级 Android 开发人员",
     twitter = "twitter.com/taylorbrookscodes",
-    timeZone = "12:25 AM local time (Eastern Daylight Time)",
+    timeZone = "当地时间 12:25 AM（东部夏令时）",
     commonChannels = "2"
 )
 
 /**
- * Example "me" profile.
+ * 示例“我”的档案。
  */
 val meProfile = ProfileScreenState(
     userId = "me",
     photo = R.drawable.ali,
-    name = "Ali Conors",
-    status = "Online",
+    name = "阿里·康纳斯",
+    status = "在线",
     displayName = "aliconors",
-    position = "Senior Android Dev at Yearin\nGoogle Developer Expert",
+    position = "Yearin 的高级 Android 开发人员\nGoogle 开发者专家",
     twitter = "twitter.com/aliconors",
-    timeZone = "In your timezone",
+    timeZone = "在你的时区",
     commonChannels = null
 )
 
@@ -117,3 +112,4 @@ object EMOJIS {
     // ANDROID 12.0  👉
     const val EMOJI_POINTS = " \uD83D\uDC49"
 }
+
